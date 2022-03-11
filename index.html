@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+      <title>Frontend Mentor | Tip calculator app</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/styles.css" />
+
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+   </head>
+   <body>
+      <main>
+         <div class="container">
+            <nav>
+               <img src="images/logo.svg" alt="Logo Image" />
+            </nav>
+            <section class="calculator">
+               <div class="calculate">
+                  <label for="bill">Bill</label>
+                  <input type="number" name="bill" id="bill" placeholder="0" />
+                  <label for="select-tips">Select Tip %</label>
+                  <div class="tips">
+                     <button class="tip">5%</button>
+                     <button class="tip">10%</button>
+                     <button class="tip">15%</button>
+                     <button class="tip">25%</button>
+                     <button class="tip">50%</button>
+                     <input type="number" name="custom" id="custom" placeholder="Custom" />
+                  </div>
+                  <label for="people">Number of People</label>
+                  <p class="error-msg">Can't be zero</p>
+                  <input type="number" name="people" id="people" placeholder="0" />
+               </div>
+               <div class="display">
+                  <div class="tip-amount">
+                     <div>
+                        <p>Tip Amount</p>
+                        <span>/ person</span>
+                     </div>
+                     <p id="tip-amt" class="p-amount">$0.00</p>
+                  </div>
+                  <div class="total">
+                     <div>
+                        <p>Total</p>
+                        <span>/ person</span>
+                     </div>
+                     <p id="total-amt" class="p-amount">$0.00</p>
+                  </div>
+                  <button class="reset-btn">RESET</button>
+               </div>
+            </section>
+         </div>
+      </main>
+
+      <script src="app.js"></script>
+   </body>
+</html>

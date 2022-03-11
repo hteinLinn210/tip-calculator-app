@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --strong-cyan: hsl(172, 67%, 45%);
+   --very-dark-cyan: hsl(183, 100%, 15%);
+   --dark-grayish-cyan: hsl(186, 14%, 43%);
+   --grayish-cyan: hsl(184, 14%, 56%);
+   --light-grayish-cyan: hsl(185, 41%, 84%);
+   --very-light-grayish-cyan: hsl(189, 41%, 97%);
+   --white: hsl(0, 0%, 100%);
+}
+
+body {
+   background-color: var(--light-grayish-cyan);
+   color: var(--grayish-cyan);
+   font-family: "Space Mono", monospace;
+   font-size: 1rem;
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+nav {
+   text-align: center;
+   margin: 2.5rem;
+}
+
+span {
+   color: var(--grayish-cyan);
+   font-size: 0.75rem;
+}
+
+button {
+   cursor: pointer;
+}
+
+/* Input styles Start */
+
+input {
+   background-color: var(--very-light-grayish-cyan);
+   border: none;
+   border-radius: 5px;
+   color: var(--very-dark-cyan);
+   font-family: "Space Mono", monospace;
+   font-size: 1.5rem;
+   outline: none;
+   margin: 0.5rem 0 1.5rem;
+   padding-right: 0.5rem;
+   text-align: right;
+   width: 100%;
+}
+
+input[name="bill"] {
+   background-image: url(../images/icon-dollar.svg);
+   background-repeat: no-repeat;
+   background-position-y: center;
+}
+
+input[name="people"] {
+   background-image: url(../images/icon-person.svg);
+   background-repeat: no-repeat;
+   background-position-y: center;
+}
+
+input[name="custom"] {
+   padding-top: 0.6rem;
+   position: relative;
+   top: -8px;
+}
+
+input:focus {
+   background-image: none;
+   border: 2px solid var(--strong-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+/* Input styles End */
+
+::placeholder {
+   color: var(--grayish-cyan);
+}
+
+.calculator {
+   background-color: var(--white);
+   border-radius: 20px;
+   padding: 1.5rem;
+   max-width: 375px;
+}
+
+/* Calculate Section */
+
+.calculate {
+   margin-bottom: 1rem;
+   position: relative;
+}
+
+.error-msg {
+   color: orangered;
+   display: none;
+   font-size: 0.8rem;
+   position: absolute;
+   right: 10%;
+   top: 71%;
+}
+
+/* Select Tips Start */
+
+.tips {
+   display: grid;
+   justify-items: center;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem 0.75rem;
+   margin: 1rem 0;
+}
+
+.tip {
+   background-color: var(--very-dark-cyan);
+   border: none;
+   border-radius: 5px;
+   color: var(--white);
+   font-family: "Space Mono", monospace;
+   font-size: 1.5rem;
+   height: 3rem;
+   width: 100%;
+   transition: 0.3s;
+}
+
+.tip:hover {
+   color: var(--very-dark-cyan);
+   background-color: var(--strong-cyan);
+}
+
+/* Select Tips End */
+
+/* Display Section */
+.display {
+   background-color: var(--very-dark-cyan);
+   border-radius: 10px;
+   color: var(--white);
+   padding: 2rem 1.5rem 1rem;
+}
+
+.tip-amount,
+.total {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 1rem 0;
+}
+
+.p-amount {
+   color: var(--strong-cyan);
+   font-size: 1.5rem;
+}
+
+.reset-btn {
+   background-color: var(--strong-cyan);
+   border: none;
+   border-radius: 5px;
+   color: var(--very-dark-cyan);
+   font-weight: 700;
+   margin-top: 1rem;
+   padding: 0.75rem;
+   width: 100%;
+   transition: 0.3s;
+}
+
+.reset-btn:hover {
+   background-color: var(--light-grayish-cyan);
+}
+
+@media screen and (min-width: 800px) {
+   nav {
+      margin: 8rem 0 4rem;
+   }
+   input[name="bill"] {
+      margin-bottom: 2rem;
+   }
+
+   input[name="people"] {
+      margin-bottom: 0;
+   }
+   .calculator {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      max-width: 920px;
+   }
+
+   .calculate {
+      width: 48%;
+   }
+
+   .tips {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 2rem;
+   }
+
+   .error-msg {
+      top: 83%;
+   }
+
+   .display {
+      width: 48%;
+      height: 100%;
+   }
+
+   .reset-btn {
+      margin-top: 6rem;
+   }
+
+   .tip-amount,
+   .total {
+      margin-bottom: 2rem;
+   }
+
+   .p-amount {
+      font-size: 2rem;
+   }
+}
